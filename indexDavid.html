@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>PartieDavid</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/mainDavid.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div>
+							<div class="inner">
+								<p id="demo"></p>
+
+					<script>
+					var i = 0;
+					var txt = '/DavidSanchez';
+					var speed = 100;
+
+					function typeWriter() {	
+  						if (i < txt.length) {
+    					document.getElementById("demo").innerHTML += txt.charAt(i);
+    					i++;
+    					setTimeout(typeWriter, speed);
+  					}
+				}
+
+				window.onload = function() {
+  					typeWriter(); // Lance l'animation dès le chargement de la page
+				};
+					</script>
+
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#competence">Compétences</a></li>
+								<li><a href="#methodologie">méthodologie</a></li>
+								<li><a href="#projets">Projets</a></li>
+								<li><a href="#qualites">Qualités</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+							<article id="competence">
+								<h2 class="major">Compétences Techniques</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p><li>Front-end : Maîtrise des technologies HTML, CSS, et JavaScript pour créer des interfaces utilisateur interactives et responsives.</li>
+									<li>Back-end : Connaissance des langages de programmation côté serveur tels que Node.js et PHP. Expérience avec les bases de données relationnelles (MySQL)</li>
+									<li>Outils de développement : Utilisation de Git pour la gestion de version et des outils de collaboration comme GitHub et GitLab.</li>
+									<li>Environnements de développement : Connaissance des frameworks et des bibliothèques comme Bootstrap.</li></p>
+								<p></p>
+							</article>
+
+							<article id="methodologie">
+								<h2 class="major">méthodologie</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p><li>Travail en équipe, et organisation avec deadlines.</li></p>
+							</article>
+
+							<article id="projets">
+								<h2 class="major">Projets réalisés</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<p><li>Conception et développement de sites web dynamiques en utilisant des technologies modernes (HTML5, CSS3, JavaScript).</li>
+									<li>Création de bases de données simples.</li></p>
+							</article>
+							
+							<article id="qualites">
+								<h2 class="major">Qualités personnelles</h2>
+								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
+								<p><li>Grande capacité d'adaptation et volonté d'apprendre de nouvelles technologies et outils.</li>
+									<li>Esprit d'équipe et bonne communication pour collaborer efficacement avec d'autres développeurs et designers.</li></p>
+							</article>
+					</div>
+				<!-- Footer -->
+					<footer id="footer">
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<!-- <script src="assets/js/util.js"></script> -->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
