@@ -1106,7 +1106,7 @@ input, select, textarea {
 
 /* BG */
 
-	#bg {
+	#fond {
 		-moz-transform: scale(1.0);
 		-webkit-transform: scale(1.0);
 		-ms-transform: scale(1.0);
@@ -1120,7 +1120,7 @@ input, select, textarea {
 		z-index: 1;
 	}
 
-		#bg:before, #bg:after {
+		#fond:before, #fond:after {
 			content: '';
 			display: block;
 			position: absolute;
@@ -1130,7 +1130,7 @@ input, select, textarea {
 			height: 100%;
 		}
 
-		#bg:before {
+		#fond:before {
 			-moz-transition: background-color 2.5s ease-in-out;
 			-webkit-transition: background-color 2.5s ease-in-out;
 			-ms-transition: background-color 2.5s ease-in-out;
@@ -1149,7 +1149,7 @@ input, select, textarea {
 			z-index: 2;
 		}
 
-		#bg:after {
+		#fond:after {
 			-moz-transform: scale(1.125);
 			-webkit-transform: scale(1.125);
 			-ms-transform: scale(1.125);
@@ -1158,14 +1158,14 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/fondindex.jpg");
+			background-image: url("../../images/fond.jpeg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: 1;
 		}
 
-		body.is-article-visible #bg:after {
+		body.is-article-visible #fond:after {
 			-moz-transform: scale(1.0825);
 			-webkit-transform: scale(1.0825);
 			-ms-transform: scale(1.0825);
@@ -1176,7 +1176,7 @@ input, select, textarea {
 			filter: blur(0.2rem);
 		}
 
-		body.is-preload #bg:before {
+		body.is-preload #fond:before {
 			background-color: #000000;
 		}
 
@@ -1271,16 +1271,7 @@ input, select, textarea {
 			margin-top: 3.5rem;
 		}
 
-			#header > *:before {
-				content: '';
-				display: block;
-				position: absolute;
-				top: calc(-3.5rem - 1px);
-				left: calc(50% - 1px);
-				width: 1px;
-				height: calc(3.5rem + 1px);
-				background: #ffffff;
-			}
+		
 
 		#header > :first-child {
 			margin-top: 0;
@@ -1381,7 +1372,7 @@ input, select, textarea {
 			display: block;
 			position: absolute;
 			top: 0;
-			left: calc(50% - 1px);
+			left: calc(58% - 1px); 
 			width: 1px;
 			height: 100%;
 			background: #ffffff;
@@ -1663,7 +1654,7 @@ input, select, textarea {
 
 		body {
             margin: 0; 
-            background-image: url('images/fondindex.jpg');
+            background-image: url('images/fond.jpeg');
             background-size: cover; 
             background-repeat: no-repeat;
             background-position: center; 
@@ -1673,8 +1664,8 @@ input, select, textarea {
 			font-size: 150%;
 		}
 
-		.logoimg {
-			width: 100%;
-			height: 100%;
-			border-radius: 75px;
-		}
+.ulul {
+	margin: 0; 
+	font-size: 200%;
+	padding-right: 100%;
+}
