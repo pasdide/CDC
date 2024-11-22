@@ -1,18 +1,13 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
-/*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+u, i, center, dl, dt, dd, ol, li, fieldset,
 form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
@@ -36,7 +31,53 @@ body {
 ol, ul {
 	list-style: none;
 }
+.search {
+	--padding: 3px;
 
+	width: max-content;
+	display: flex;
+	align-items: center;
+	padding: var(--padding);
+	border-radius: 28px;
+	background: #333333;
+}
+.search-input{
+	font-size: 16px;
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	color: #acaaaa;
+	margin-left: var(--padding);
+	background: transparent;
+	outline: none;
+	border: none;
+	flex: 1;
+}
+.logo-link { 
+	font-size: 200%;
+	display: flex;
+}
+.logo-link svg {
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.logo-link:hover svg {
+    transform: scale(1.1); 
+}
+
+.search::placeholder,
+.material-symbols-outlined {
+	color: rgba(165, 165, 165, 0.25)
+
+}
+.search:focus-within{
+	box-shadow: 0 0 20px rgba(114, 117, 138, 0.25);
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
 blockquote, q {
 	quotes: none;
 }
@@ -152,14 +193,10 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
 		text-decoration: none;
 		color: inherit;
 	}
 
-		a:hover {
-			border-bottom-color: transparent;
-		}
 
 	strong, b {
 		color: #ffffff;
@@ -1111,7 +1148,7 @@ input, select, textarea {
 		-webkit-transform: scale(1.0);
 		-ms-transform: scale(1.0);
 		transform: scale(1.0);
-		-webkit-backface-visibility: hidden;
+		/* -webkit-backface-visibility: hidden; */
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -1140,9 +1177,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1155,7 +1195,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.jpg");
+			background-image: url("../../images/fondindex.jpg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -1267,17 +1307,6 @@ input, select, textarea {
 			position: relative;
 			margin-top: 3.5rem;
 		}
-
-			#header > *:before {
-				content: '';
-				display: block;
-				position: absolute;
-				top: calc(-3.5rem - 1px);
-				left: calc(50% - 1px);
-				width: 1px;
-				height: calc(3.5rem + 1px);
-				background: #ffffff;
-			}
 
 		#header > :first-child {
 			margin-top: 0;
@@ -1655,4 +1684,23 @@ input, select, textarea {
 
 		body.is-preload #footer {
 			opacity: 0;
+		}
+
+
+		body {
+            margin: 0; 
+            background-image: url('images/fondindex.jpg');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
+
+		ul {
+			font-size: 150%;
+		}
+
+		.logoimg {
+			width: 100%;
+			height: 100%;
+			border-radius: 75px;
 		}
