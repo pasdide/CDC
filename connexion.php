@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <link rel="icon" href="icon.png">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-        <link rel="stylesheet" href="css/styleform.css">
+        <link rel="stylesheet" href="assets/css/styleform.css">
 
     </head>
 
@@ -45,6 +45,14 @@
 ?>
 
     <body>
+    <div style="display: flex; align-items: center; justify-content: flex-start; position: absolute; left: 0; top: 0; padding: 10px; gap: 10px;">
+							<a href="index.html" class="logo-link" style="display: inline-block; text-align: left;">
+								<span class="label"></span>
+								<svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#5f6368">
+									<path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
+								</svg>
+							</a>
+						</div>
         <main class="main">
             <div class="cadre">
             <div class="wrapper">
