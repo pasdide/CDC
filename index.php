@@ -1,3 +1,13 @@
+<?php 
+
+$nom_serveur = "51.83.43.233";
+$utilisateur = "u1803_BA4CbKs48i";
+$mot_de_passe ="HSJllC=H0O5dTsAR9VVGa1h!";
+$nom_base_données ="s1803_padrino" ;
+$con = mysqli_connect($nom_serveur , $utilisateur ,$mot_de_passe , $nom_base_données);
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -13,15 +23,14 @@
 			<div id="wrapper">
 
 					<header id="header">
-						<a href="index.html" class="logo-link"> <span class="label"></span>
+						<a href="index.php" class="logo-link"> <span class="label"></span>
 							<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
 								<path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
 							</svg>
 						</a>
-						<form>
+						<form method="get" action="search.php" autocomplete="off">
 							<div class="search">
-								<span class="material-symbols-outlined">search</span>
-								<input class="search-input" type="search" placeholder="Rechercher">
+								<input type="text"name="search" placeholder="Rechercher">
 							</div>
 						</form>
 						<div class="logo">
@@ -37,7 +46,7 @@
 							<ul>
 								<li><a href="jules.html">Jules</a></li>
 								<li><a href="pierre.html">Pierre</a></li>
-								<li><a href="david.html">David</a></li>
+								<li><a href="david.php">David</a></li>
 								<li><a href="alexia.html">Alexia</a></li>
 								<li><a href="max.html">Max</a></li>
 							</ul>
