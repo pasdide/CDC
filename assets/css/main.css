@@ -38,7 +38,7 @@ ol, ul {
 	display: flex;
 	align-items: center;
 	padding: var(--padding);
-	border-radius: 28px;
+	border-radius: 10px;
 	background: #333333;
 }
 .search-input{
