@@ -12,7 +12,7 @@ iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+u, i, center, dl, dt, dd, ol, li, fieldset,
 form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
@@ -31,12 +31,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-	h1 {
-		font-family:'Trebuchet MS', 'Lucida Sans Unicode'
-	}
-	p {
-		font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-	}
 }
 
 ol, ul {
@@ -59,6 +53,21 @@ table {
 
 body {
 	-webkit-text-size-adjust: none;
+}
+
+.logo-link { 
+	font-size: 200%;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+.logo-link svg {
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.logo-link:hover svg {
+    transform: scale(1.1); 
 }
 
 mark {
@@ -158,7 +167,6 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
 		text-decoration: none;
 		color: inherit;
 	}
@@ -182,7 +190,7 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
-		font-weight: 10;
+		font-weight: 600;
 		line-height: 1.5;
 		margin: 0 0 1rem 0;
 		text-transform: uppercase;
@@ -205,7 +213,7 @@ input, select, textarea {
 		}
 
 	h1 {
-		font-size: 1rem;
+		font-size: 2.25rem;
 		line-height: 1.3;
 		letter-spacing: 0.5rem;
 	}
@@ -1112,7 +1120,7 @@ input, select, textarea {
 
 /* BG */
 
-	#devweb {
+	#fond {
 		-moz-transform: scale(1.0);
 		-webkit-transform: scale(1.0);
 		-ms-transform: scale(1.0);
@@ -1126,7 +1134,7 @@ input, select, textarea {
 		z-index: 1;
 	}
 
-		#devweb:before, #devweb:after {
+		#fond:before, #fond:after {
 			content: '';
 			display: block;
 			position: absolute;
@@ -1136,7 +1144,7 @@ input, select, textarea {
 			height: 100%;
 		}
 
-		#devweb:before {
+		#fond:before {
 			-moz-transition: background-color 2.5s ease-in-out;
 			-webkit-transition: background-color 2.5s ease-in-out;
 			-ms-transition: background-color 2.5s ease-in-out;
@@ -1155,7 +1163,7 @@ input, select, textarea {
 			z-index: 2;
 		}
 
-		#devweb:after {
+		#fond:after {
 			-moz-transform: scale(1.125);
 			-webkit-transform: scale(1.125);
 			-ms-transform: scale(1.125);
@@ -1164,14 +1172,14 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/devweb.jpeg");
+			background-image: url("../../images/fond.jpeg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: 1;
 		}
 
-		body.is-article-visible #devweb:after {
+		body.is-article-visible #fond:after {
 			-moz-transform: scale(1.0825);
 			-webkit-transform: scale(1.0825);
 			-ms-transform: scale(1.0825);
@@ -1182,7 +1190,7 @@ input, select, textarea {
 			filter: blur(0.2rem);
 		}
 
-		body.is-preload #devweb:before {
+		body.is-preload #fond:before {
 			background-color: #000000;
 		}
 
@@ -1277,16 +1285,7 @@ input, select, textarea {
 			margin-top: 3.5rem;
 		}
 
-			#header > *:before {
-				content: '';
-				display: block;
-				position: absolute;
-				top: calc(-3.5rem - 1px);
-				left: calc(50% - 1px);
-				width: 1px;
-				height: calc(3.5rem + 1px);
-				background: #ffffff;
-			}
+		
 
 		#header > :first-child {
 			margin-top: 0;
@@ -1387,7 +1386,7 @@ input, select, textarea {
 			display: block;
 			position: absolute;
 			top: 0;
-			left: calc(50% - 1px);
+			left: calc(58% - 1px); 
 			width: 1px;
 			height: 100%;
 			background: #ffffff;
@@ -1665,3 +1664,22 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+
+		body {
+            margin: 0; 
+            background-image: url('images/fond.jpeg');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
+
+		ul {
+			font-size: 150%;
+		}
+
+.ulul {
+	margin: 0; 
+	font-size: 200%;
+	padding-right: 100%;
+}
