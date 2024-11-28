@@ -68,7 +68,7 @@
            <input type="text" name="email">
            <label >Mots de Passe</label>
            <input type="password" name="mdp">
-           <u><h6 >Si vous avez oubliez votre mot de passe, merci de vous adresser au gardien</h6></u>
+           <u><h6 >Accès strictement réservé aux membres.</h6></u>
            <input type="submit" value="Valider" name="boutton-valider">
        </form>
    </section> 

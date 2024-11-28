@@ -49,6 +49,7 @@
 								<li><a href="david.html">David</a></li>
 								<li><a href="alexia.html">Alexia</a></li>
 								<li><a href="max.html">Max</a></li>
+								<li><a href="projet.html">Projets</a></li>
 							</ul>
 						</nav>
 					</header>
