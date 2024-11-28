@@ -13,10 +13,12 @@
 :root {
     --cyan: hsl(206, 100%, 88%);
     --text-cyan: hsl(209, 100%, 88%, 0.75);
-    --greenly: hsl(140, 49% 67%);
+    --greenly: hsl(140, 49%, 67%);
     --darkly:   hsl(220, 12%, 5%);
     --text-primary: hsl(220, 8%, 16%);
     --lightly:  hsl(206, 20%, 93%);
+    --grey: #e2dfdf;
+    --whitey: hsl(208, 76%, 97%);
 }
 
 body {
@@ -75,4 +77,108 @@ body {
 /* main */
 .main-container {
     grid-area: main;
+    overflow-y: auto;
+    padding: 20px;
+
+}
+
+.main-title {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main-title > p {
+    font-size: 20px;
+}
+
+.main-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-transform: uppercase; 
+    padding: 24px;
+    background-color: var(--whitey);
+    border: 2px solid var(--grey);
+    box-shadow: 0 8px 12px -4px rgba(0, 0, 0, 0.3);
+}
+
+.card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.card-inner > p {
+    font-size: 20px;
+}
+
+.card-inner > span {
+    font-size: 40px;
+}
+
+
+.card:nth-child(1) {
+    border-left: 7px solid #eba91d
+}
+
+.card:nth-child(2) {
+    border-left: 7px solid #bc1e51
+}
+.card:nth-child(3) {
+    border-left: 7px solid #04a07e
+}
+.card:nth-child(4) {
+    border-left: 7px solid #434738
+}
+
+.text-yellow {
+    color: #eba91d;
+}
+
+.text-red {
+    color: #bc1e51;
+}
+
+.text-turc {
+    color: #04a07e;
+}
+
+.text-indigo {
+    color:#434738
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.charts-card {
+    background-color: var(--whitey);
+    margin-bottom: 20px;
+    padding: 25px;
+    border: 1px solid var(--cyan);
+    box-shadow: 0 8px 12px -4px rgba(0, 0, 0, 0.3);
+}
+
+.chart-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.fw-600 {
+    font-weight: 600;
 }

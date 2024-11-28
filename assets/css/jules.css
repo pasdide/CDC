@@ -1,6 +1,6 @@
 /* fond d'écran */
 
-	#bg {
+	#jules {
 		-moz-transform: scale(1.0);
 		-webkit-transform: scale(1.0);
 		-ms-transform: scale(1.0);
@@ -13,7 +13,7 @@
 		z-index: 1;
 	}
 
-		#bg:before, #bg:after {
+		#jules:before, #jules:after {
 			content: '';
 			display: block;
 			position: absolute;
@@ -23,7 +23,7 @@
 			height: 100%;
 		}
 
-		#bg:before {
+		#jules:before {
 			-moz-transition: background-color 2.5s ease-in-out;
 			-webkit-transition: background-color 2.5s ease-in-out;
 			-ms-transition: background-color 2.5s ease-in-out;
@@ -42,7 +42,7 @@
 			z-index: 2;
 		}
 
-		#bg:after {
+		#jules:after {
 			-moz-transform: scale(1.125);
 			-webkit-transform: scale(1.125);
 			-ms-transform: scale(1.125);
@@ -58,7 +58,7 @@
 			z-index: 1;
 		}
 
-		body.is-article-visible #bg:after {
+		body.is-article-visible #jules:after {
 			-moz-transform: scale(1.0825);
 			-webkit-transform: scale(1.0825);
 			-ms-transform: scale(1.0825);
@@ -69,7 +69,7 @@
 			filter: blur(0.2rem);
 		}
 
-		body.is-preload #bg:before {
+		body.is-preload #jules:before {
 			background-color: #000000;
 		}
 
