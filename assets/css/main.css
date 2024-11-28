@@ -38,7 +38,7 @@ ol, ul {
 	display: flex;
 	align-items: center;
 	padding: var(--padding);
-	border-radius: 28px;
+	border-radius: 10px;
 	background: #333333;
 }
 .search-input{
@@ -51,6 +51,14 @@ ol, ul {
 	border: none;
 	flex: 1;
 }
+.ui-menu-item{
+	background: #333333;
+	color: white;
+}
+.ui-menu-item-wrapper{
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .logo-link { 
 	font-size: 200%;
 	display: flex;
