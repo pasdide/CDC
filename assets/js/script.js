@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     var suggestions = [
         "Jules",
@@ -15,3 +16,4 @@ $(document).ready(function() {
         }
     });
 });
+

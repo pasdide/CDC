@@ -1,3 +1,4 @@
+
 <?php
 $host = '13.38.23.177';
 $dbname = 's1828_recherche';
