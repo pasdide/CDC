@@ -5,7 +5,8 @@ $(document).ready(function() {
         "Pierre",
         "David",
         "Alexia",
-        "Max"
+        "Max",
+        "Projet"
     ];
     $("#search").autocomplete({
         source: suggestions, 
