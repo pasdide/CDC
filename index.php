@@ -6,6 +6,9 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	</head>
 	<body class="is-preload">
 		
@@ -27,10 +30,9 @@
 							</a>
 						</div>
 						
-						<form>
+						<form method="get" action="search.php" autocomplete="off">
 							<div class="search">
-								<span class="material-symbols-outlined">search</span>
-								<input class="search-input" type="search" placeholder="Rechercher">
+								<input type="text" name="search" placeholder="Rechercher" id="search">
 							</div>
 						</form>
 						<div class="logo">
@@ -77,6 +79,10 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+			</script>
+			<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+			<script type="text/JavaScript" src="assets/js/script.js"></script>
 
 	</body>
 </html>
