@@ -13,10 +13,12 @@
 :root {
     --cyan: hsl(206, 100%, 88%);
     --text-cyan: hsl(209, 100%, 88%, 0.75);
-    --greenly: hsl(140, 49% 67%);
+    --greenly: hsl(140, 49%, 67%);
     --darkly:   hsl(220, 12%, 5%);
     --text-primary: hsl(220, 8%, 16%);
     --lightly:  hsl(206, 20%, 93%);
+    --grey: #e2dfdf;
+    --whitey: hsl(208, 76%, 97%);
 }
 
 body {
@@ -75,4 +77,220 @@ body {
 /* main */
 .main-container {
     grid-area: main;
+    overflow-y: auto;
+    padding: 20px;
+
 }
+
+.main-title {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main-title > p {
+    font-size: 20px;
+}
+
+.main-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-transform: uppercase; 
+    padding: 24px;
+    background-color: var(--whitey);
+    border: 2px solid var(--grey);
+    box-shadow: 0 8px 12px -4px rgba(0, 0, 0, 0.3);
+}
+
+.card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.card-inner > p {
+    font-size: 20px;
+}
+
+.card-inner > span {
+    font-size: 40px;
+}
+
+
+.card:nth-child(1) {
+    border-left: 7px solid #eba91d
+}
+
+.card:nth-child(2) {
+    border-left: 7px solid #bc1e51
+}
+.card:nth-child(3) {
+    border-left: 7px solid #04a07e
+}
+.card:nth-child(4) {
+    border-left: 7px solid #434738
+}
+
+.text-yellow {
+    color: #eba91d;
+}
+
+.text-red {
+    color: #bc1e51;
+}
+
+.text-turc {
+    color: #04a07e;
+}
+
+.text-indigo {
+    color:#434738
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.charts-card {
+    background-color: var(--whitey);
+    margin-bottom: 20px;
+    padding: 25px;
+    border: 1px solid var(--cyan);
+    box-shadow: 0 8px 12px -4px rgba(0, 0, 0, 0.3);
+}
+
+.chart-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+/* over 992px */
+
+@media screen and (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 120px 1fr;
+        grid-template-areas: 'sidebar header' 'sidebar main';
+    }
+
+    .sidebar-title {
+        justify-content: center;
+    }
+
+    .sidebar-title > span {
+        display: inline;
+    }
+
+    .sidebar-brand > .label-title {
+        display: none;
+    }
+
+    .sidebar-list {
+        text-align: center;
+    }
+
+    .sidebar-list-item > .label-item {
+        display: none;
+    }
+
+    .sidebar-list-item > :not(.label-item),
+    .sidebar-brand > :not(.label-title) {
+        font-size: 36px;
+    }
+}
+/* over 768px */
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'header' 'main';
+    }
+
+    .main-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+
+    .charts {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+
+    }
+
+    #sidebar {
+        position: absolute;
+        width: 120px;
+        transform: translateX(-120px);
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: .3s ease-in;
+    }
+
+
+    .menu-icon:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+
+    .sidebar-responsive {
+        display: block;
+        transform: translateX(0) !important;
+    }
+
+    .sidebar-responsive + .main-container,
+    .header-responsive {
+        width: calc(100% - 120px);
+        transform: translateX(120px);
+        transition: 0.3s ease-in;
+        overflow-x: hidden;
+    }
+
+    .charts-card * {
+        width: 100% !important;
+    }
+}
+
+/* over 576px */
+
+@media screen and (max-width: 576px) {
+    #sidebar {
+        width: 70px;
+    }
+
+    .sidebar-responsive + .main-container,
+    .header-responsive {
+        width: calc(100% - 70px);
+        transform: translateX(700px);
+    }
+}
+
+
+
+
