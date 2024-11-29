@@ -182,3 +182,115 @@ body {
 .fw-600 {
     font-weight: 600;
 }
+
+/* over 992px */
+
+@media screen and (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 120px 1fr;
+        grid-template-areas: 'sidebar header' 'sidebar main';
+    }
+
+    .sidebar-title {
+        justify-content: center;
+    }
+
+    .sidebar-title > span {
+        display: inline;
+    }
+
+    .sidebar-brand > .label-title {
+        display: none;
+    }
+
+    .sidebar-list {
+        text-align: center;
+    }
+
+    .sidebar-list-item > .label-item {
+        display: none;
+    }
+
+    .sidebar-list-item > :not(.label-item),
+    .sidebar-brand > :not(.label-title) {
+        font-size: 36px;
+    }
+}
+/* over 768px */
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'header' 'main';
+    }
+
+    .main-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+
+    .charts {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+
+    }
+
+    #sidebar {
+        position: absolute;
+        width: 120px;
+        transform: translateX(-120px);
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: .3s ease-in;
+    }
+
+
+    .menu-icon:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+
+    .sidebar-responsive {
+        display: block;
+        transform: translateX(0) !important;
+    }
+
+    .sidebar-responsive + .main-container,
+    .header-responsive {
+        width: calc(100% - 120px);
+        transform: translateX(120px);
+        transition: 0.3s ease-in;
+        overflow-x: hidden;
+    }
+
+    .charts-card * {
+        width: 100% !important;
+    }
+}
+
+/* over 576px */
+
+@media screen and (max-width: 576px) {
+    #sidebar {
+        width: 70px;
+    }
+
+    .sidebar-responsive + .main-container,
+    .header-responsive {
+        width: calc(100% - 70px);
+        transform: translateX(700px);
+    }
+}
+
+
+
+
