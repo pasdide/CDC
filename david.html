@@ -101,6 +101,21 @@
 					</div>
 				<!-- Footer -->
 					<footer id="footer">
+						<button class="like-button" onclick="toggleLike(this)">
+							<span class="like-icon">👍</span>
+							<span class="like-text">Recommander</span>
+						</button>
+						<script>
+							function toggleLike(button) {
+								button.classList.toggle('liked');
+								const likeText = button.querySelector('.like-text');
+								if (button.classList.contains('liked')) {
+									likeText.textContent = "Vous recommandez";
+								} else {
+									likeText.textContent = "Recommander";
+								}
+							}
+						</script>
 					</footer>
 
 			</div>
