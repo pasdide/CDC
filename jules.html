@@ -32,6 +32,12 @@
 								<svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#5f6368">
 								<path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg>
 							</a>
+							<a href="pagecontact.php" class="logo-link" style="display: inline-block; text-align: left;">
+								<span class="label"></span>
+								<svg xmlns="http://www.w3.org/2000/svg" height="60px" viewBox="0 -960 960 850" width="36px" fill="#5f6368">
+									<path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/>
+								</svg>
+							</a>
 						</div>
 						<div class="logo">
 							<img class="CP" src="images/logo.png">
@@ -119,7 +125,26 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">	 </p>
+						<button onclick="increment()">
+							<span class="like-icon">👍</span>
+							<span class="like-text">Recommander</span>
+						</button>
+	
+						<script>
+							async function increment() {
+								try {
+									const response = await fetch("jules.php", { method: "POST" });
+									if (response.ok) {
+										const result = await response.text();
+										document.getElementById("result").innerText = `Recommandations : ${result}`;
+									} else {
+										console.error("Erreur serveur :", response.statusText);
+									}
+								} catch (error) {
+									console.error("Erreur réseau :", error);
+								}
+							}
+						</script>
 					</footer>
 
 			</div>

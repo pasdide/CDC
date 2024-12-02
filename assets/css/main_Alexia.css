@@ -1468,7 +1468,7 @@ repeat;
 			display: block;
 			position: absolute;
 			top: 0;
-			left: calc(50% - 1px);
+			left: calc(53% - 1px);
 			width: 1px;
 			height: 100%;
 			background: #ffffff;
@@ -1720,7 +1720,7 @@ repeat;
 		width: 100%;
 		max-width: 100%;
 		margin-top: 2rem;
-		text-align: center;
+		text-align: right;
 	}
 
 		#footer .copyright {

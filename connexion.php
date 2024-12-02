@@ -34,7 +34,7 @@
         $req = mysqli_query($con , "SELECT * FROM utilisateurs WHERE email = '$email' AND mdp ='$mdp' ") ;
         $num_ligne = mysqli_num_rows($req) ;//Compter le nombre de ligne ayant rapport a la requette SQL
         if($num_ligne > 0){
-            header("Location:dashboard.html") ;//Si le nombre de ligne est > 0 , on sera redirigé vers la page bienvenu
+            header("Location:dashboard.php") ;//Si le nombre de ligne est > 0 , on sera redirigé vers la page bienvenu
             // Nous allons créer une variable de type session qui vas contenir l'email de l'utilisateur
             $_SESSION['email'] = $email ;
         }else {//si non
@@ -68,7 +68,7 @@
            <input type="text" name="email">
            <label >Mots de Passe</label>
            <input type="password" name="mdp">
-           <u><h6 >Si vous avez oubliez votre mot de passe, merci de vous adresser au gardien</h6></u>
+           <u><h6 >Accès strictement réservé aux membres.</h6></u>
            <input type="submit" value="Valider" name="boutton-valider">
        </form>
    </section> 
