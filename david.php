@@ -10,7 +10,7 @@ try {
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	// Récupérer la valeur actuelle
-	$stmt = $pdo->query("SELECT recommendation FROM utilisateurs WHERE idu = 2");
+	$stmt = $pdo->query("SELECT recommendation FROM utilisateurs WHERE idu = 1");
 	$row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 	if ($row) {
@@ -18,7 +18,7 @@ try {
 		$newValue = $currentValue + 1;
 
 		// Incrémenter la valeur
-		$updateStmt = $pdo->prepare("UPDATE utilisateurs SET recommendation = :newValue WHERE idu = 2");
+		$updateStmt = $pdo->prepare("UPDATE utilisateurs SET recommendation = :newValue WHERE idu = 1");
 		$updateStmt->execute(['newValue' => $newValue]);
 		// Retourner la nouvelle valeur
 		echo $newValue;

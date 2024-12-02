@@ -92,24 +92,26 @@
 
 				<!-- Footer -->
                 <footer id="footer">
-                    <button class="like-button" onclick="toggleLike(this)">
-                        <span class="like-icon">👍</span>
-                        <span class="like-text">Recommander</span>
-                    </button>
-                    <script>
-						variable = 0
-                        function toggleLike(button) {
-                            button.classList.toggle('liked');
-                            const likeText = button.querySelector('.like-text');
-                            if (button.classList.contains('liked')) {
-                                likeText.textContent = "Vous recommandez";
-								variable = variable + 1 
-                            } else {
-                                likeText.textContent = "Recommander";
-								variable = variable - 1 
-                            }
-                        }
-                    </script>
+                    <button onclick="increment()">
+						<span class="like-icon">👍</span>
+						<span class="like-text">Recommander</span>
+					</button>
+
+					<script>
+						async function increment() {
+							try {
+								const response = await fetch("alexia.php", { method: "POST" });
+								if (response.ok) {
+									const result = await response.text();
+									document.getElementById("result").innerText = `Recommandations : ${result}`;
+								} else {
+									console.error("Erreur serveur :", response.statusText);
+								}
+							} catch (error) {
+								console.error("Erreur réseau :", error);
+							}
+						}
+					</script>
                 </footer>
 
 			</div>
